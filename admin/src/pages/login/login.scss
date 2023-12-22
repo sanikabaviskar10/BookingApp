@@ -1,32 +1,60 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body, html {
+  height: 100%;
+}
+
+// Center the login form both horizontally and vertically
 .login {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // Contain the form elements within a centered container
   .lContainer {
+    width: 300px; /* Adjust the width as needed */
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-items: center;
+    border: 1px solid lightgray; /* Optional visual border */
+    padding: 15px; /* Optional padding for spacing */
   }
-  
-  .lInput{
+
+  // Input and button styles
+  .lInput {
     height: 30px;
     padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }
-  
+
   .lButton {
     border: none;
-    padding: 10px 20px;
+    padding: 10px
+ 
+20px;
     background-color: #0071c2;
     color: white;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius:
+ 
+5px;
+
+    &:disabled {
+      background-color: #0071c28c;
+      cursor: not-allowed;
+    }
   }
-  
-  .lButton:disabled{
-    background-color: #0071c28c;
-    cursor: not-allowed;
+
+  // Error message style (optional)
+  span.error {
+    color: red;
+    font-size: smaller;
+    margin-top: 5px;
   }
